@@ -1,0 +1,162 @@
+.cooperation {
+  padding-bottom: 71px;
+
+  &__heading {
+    margin-bottom: 32px;
+    @include mobile {
+      margin-bottom: 27px;
+    }
+  }
+
+  &__block-heading {
+    margin-bottom: 12px;
+    font-size: 24px;
+    line-height: 33px;
+
+    @include mobile {
+      margin-bottom: 6px;
+      font-size: 16px;
+    }
+  }
+
+  &__paragraph {
+    width: 65%;
+    font-size: 16px;
+    line-height: 180%;
+    color: var(--grey-shade-color);
+    @include desktop {
+      width: 87%;
+    } 
+    @include tablet {
+      width: 100%;
+    }
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__block {
+    &:not(:last-child) {
+      margin-bottom: 35px;
+      @include mobile {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    width: 71%;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @include mobile {
+        margin-bottom: 12px;
+      }
+    }
+
+    & img {
+      margin-right: 12px;
+      width: 25px;
+      height: 25px;
+    }
+
+    & .cooperation__paragraph {
+      line-height: 1.4;
+
+      @include mobile {
+        line-height: 1.5;
+      }
+    }
+  }
+
+  &__orange-heading {
+    margin-bottom: 14px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--secondary-color);
+
+    @include mobile {
+      margin-bottom: 11px;
+    }
+  }
+
+  &__second {
+    &-heading {
+      font-size: 14px;
+    }
+  }
+
+  &__second-list {
+    & li {
+      &:not(:last-child) {
+        margin-bottom: 11px;
+      }
+    }
+  }
+
+  &__third-list {
+    & li {
+      display: flex;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      & span {
+        margin-right: 17px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 180%;
+        color: var(--secondary-color);
+      }
+
+      & p {
+        width: 63%;
+        @include desktop {
+          width: 84%;
+        }
+        @include tablet {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__image-block {
+    display: flex;
+    align-items: center;
+
+    & img {
+      margin-right: 32px;
+      width: 77px;
+
+      @include mobile {
+        margin-right: 16px;
+        width: 36px;
+      }
+    }
+
+    & h3 {
+      width: 40%;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 150%;
+      @include desktop {
+        width: 55%;
+      }
+      @include tablet {
+        width: 83%;
+      }
+      @include mobile {
+        width: 64%;
+        font-size: 16px;
+      }
+    }
+  }
+}

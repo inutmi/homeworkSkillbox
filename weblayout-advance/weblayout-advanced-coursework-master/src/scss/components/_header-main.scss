@@ -1,0 +1,119 @@
+.header-main {
+
+  height: 91px;
+
+  @include desktop {
+    padding-top: 54px;
+    padding-bottom: 5px;
+    height: unset;
+  }
+
+  @include small-tablet {
+    padding-top: 0;
+  }
+
+  @include mobile {
+    padding-top: 92px;
+    height: 50px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    height: 90px;
+
+    @include mobile {
+      height: 50px;
+    }
+  }
+
+  &__logo-link {
+    display: inline-block;
+    margin-top: 3px;
+    margin-right: auto;
+
+    @include tablet {
+      margin-top: 7px;
+      margin-left: 31.2%;
+    }
+
+    @include small-tablet {
+      margin-top: 0;
+      margin-left: 26%;
+    }
+
+    @include mobile {
+      position: absolute;
+      top: 12px;
+      left: calc((100% - 187px) / 2);
+      width: 187px;
+      margin-left: unset;
+      margin-right: unset;
+    }
+  }
+
+  &__nav {
+    margin-right: -8px;
+    margin-bottom: -4px;
+  }
+
+  &__list {
+    display: flex;
+
+    @include tablet {
+      display: inline-block;
+      columns: 2;
+      z-index: 3;
+    }
+
+    @include mobile {
+      columns: 1;
+    }
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 72px;
+
+      @include desktop {
+        margin-right: 21px;
+      }
+
+      @include tablet {
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+
+      @include mobile {
+        margin-bottom: 41px;
+      }
+    }
+  }
+
+  &__link {
+    padding: 0 10px;
+    line-height: 22px;
+    color: var(--black-color);
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+    &:focus {
+      color: var(--black-color);
+      background-color: var(--pink-violet-color);
+    }
+
+    @include for-desktop {
+      &:hover {
+        color: var(--primary-color);
+      }
+
+      &:active {
+        color: var(--primary-shade-color);
+      }
+    }
+
+    @include tablet {
+      padding: 0;
+    }
+  }
+}

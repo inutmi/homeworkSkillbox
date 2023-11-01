@@ -1,0 +1,66 @@
+.burger {
+  display: none;
+  @include tablet {
+    @include burger;
+  }
+
+  @include mobile {
+    transform: translateX(4px);
+  }
+}
+
+@include tablet {
+  .header-main {
+    &__nav {
+      display: none;
+
+      &.menu--active {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        display: inline-block;
+        padding: 92px 72px 0;
+        z-index: 9;
+        width: 100%;
+        height: 300px;
+        background-color: var(--white-color);
+        background-image: url('../img/elephant.svg');
+        background-repeat: no-repeat;
+        background-position: right 12% top 37%;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+        @include small-tablet {
+          top: 143px;
+          height: 240px;
+        }
+
+        @include mobile {
+          top: 143px;
+          padding: 62px 12px 0;
+          min-height: 533px;
+          height: unset;
+          background-image: none;
+        }
+      }
+    }
+  }
+}
+
+@include small-tablet {
+  .header-top {
+    &__nav.menu--active {
+      @include small-tablet {
+        display: block;
+        position: absolute;
+        top: 306px;
+        z-index: 10;
+        height: 100px;
+      }
+
+      @include mobile {
+        top: 571px;
+        padding: 21px 28px 12px 12px;
+      }
+    }
+  }
+}

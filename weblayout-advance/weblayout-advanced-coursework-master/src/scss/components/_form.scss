@@ -1,0 +1,79 @@
+.contact {
+  &-form {
+    &__label {
+      position: relative;
+    }
+
+    &__input {
+      display: block;
+      margin-bottom: 30px;
+      padding-left: 18px;
+      height: 54px;
+      width: 100%;
+      background-color: var(--grey-light-color);
+      border: 1px solid transparent;
+      border-radius: 10px;
+      transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+
+      &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 40px;
+        color: var(--grey-color);
+      }
+
+      &:focus {
+        outline: none;
+        background-color: var(--pink-light-color);
+        border-color: var(--primary-color);
+      }
+
+      @include for-desktop {
+        &:hover {
+          background-color: var(--md-grey-color);
+          cursor: pointer;
+        }
+
+        &:active {
+          background-color: var(--grey-light-color);
+          border-color: var(--green-input-color);
+        }
+      }
+
+      @include desktop {
+        padding-left: 17px;
+      }
+
+    }
+
+    &__btn {
+      display: block;
+      margin-bottom: 12px;
+      padding: 17px 32px;
+
+      @include mobile {
+        margin-bottom: 11px;
+      }
+    }
+  }
+}
+
+.checkbox__field.just-validate-error-field + .checkbox__text::before {
+  border: 1px solid var(--red-input-color);
+}
+
+.just-validate-error-label {
+  position: absolute;
+  top: -17px;
+  left: 19px;
+  width: 400px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--red-input-color) !important;
+}
+
+.just-validate-success-field {
+  background-color: var(--grey-light-color) !important;
+  border: 1px solid var(--green-input-color);
+}

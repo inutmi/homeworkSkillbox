@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head_catalogue.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <main class="main">
+      <div class="breadcrumbs">
+        <div class="container">
+          <a href="index.html" class="breadcrumbs__link">Главная</a>
+          <span class="breadcrumbs__slash">/</span>
+          <a href="catalogue.html" class="breadcrumbs__link">Каталог</a>
+          <span class="breadcrumbs__slash">/</span>
+          <a href="#" class="breadcrumbs__link">Диваны</a>
+          <span class="breadcrumbs__slash">/</span>
+          <a href="#" class="breadcrumbs__link breadcrumbs__link--active">Прямые диваны</a>
+        </div>
+      </div>
+
+      <section class="catalogue__couch">
+        <div class="container catalogue__couch-container">        
+          @include('partials/filter.html')
+          @include('partials/catalogue-couch.html')
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+  <div class="overlay" data-menu-overlay></div>
+</body>
+
+</html>

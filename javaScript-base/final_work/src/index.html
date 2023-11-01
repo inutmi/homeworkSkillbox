@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skillbus CRM</title>
+  <link href="./img/logo-mini.svg" rel="shortcut icon" type="image/x-icon">
+  <link href="./styles/normalize.css" rel="stylesheet">
+  <link href="./styles/choices.css" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/tippy.css">
+  <link href="./styles/style.css" rel="stylesheet">
+  <script src="./js/choices.js" defer></script>
+  <script src="./js/poper.js" defer></script>
+  <script src="./js/tippy.js" defer></script>
+  <script src="./js/inputmask.min.js" defer></script>
+  <!-- <script src="./js/main.js" defer></script> -->
+  <script src="./js/maininJS.js" defer></script>
+</head>
+
+<body>
+  <!-- <header class="header">
+    <div class="header__container liqid-container container">
+      <a class="header__logo">
+        <picture>
+          <source media="(max-width: 760px)" srcset="./img/logo-mini.svg">
+          <img src="./img/logo.svg" alt="Лого SkillBus">
+        </picture>
+      </a>
+      <div class="header__inner autocomplete">
+        <form class="header__form search-form" action="#">
+          <input class="search-form__input" id="headerSearchInput" type="search" placeholder="Введите запрос" autocomplete="off">
+        </form>
+        <ul class="autocomplete__list list-reset">
+        </ul>
+      </div>
+    </div>
+  </header> -->
+  <!-- <main>
+    <h1 class="visually-hidden">Skillbus CRM</h1>
+    <section class="clients">
+      <div class="clients__container container">
+        <h2 class="clients__title">Клиенты</h2>
+        <div class="clients__inner">
+          <table class="clients__table clients-table" id="clients-table">
+            <thead>
+              <tr>
+                <th class="clients-table__header">
+                  <button class="clients-table__header-btn btn-reset sort-th-btn clients-table__header-btn--active"
+                    data-header="id">
+                    ID
+                    <span class="clients-table__header-icon rotate-icon">
+                      <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 4L7.295 3.295L4.5 6.085L4.5 0L3.5 0L3.5 6.085L0.71 3.29L0 4L4 8L8 4Z"></path>
+                      </svg>
+                    </span>
+                  </button>
+                </th>
+                <th class="clients-table__header">
+                  <button class="clients-table__header-btn btn-reset sort-th-btn" data-header="surname">
+                    Фамилия Имя Отчество
+                    <span class="clients-table__header-icon">
+                      <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 4L7.295 3.295L4.5 6.085L4.5 0L3.5 0L3.5 6.085L0.71 3.29L0 4L4 8L8 4Z"></path>
+                      </svg>
+                    </span>
+                    <span class="clients-table__header-icon-descr clients-table__header-icon-descr--line">А-Я</span>
+                    <span class="clients-table__header-icon-descr clients-table__header-icon-descr--revers">Я-А</span>
+                  </button>
+                </th>
+                <th class="clients-table__header">
+                  <button class="clients-table__header-btn btn-reset sort-th-btn clients-date" data-header="createdAt">
+                    Дата и время создания
+                    <span class="clients-table__header-icon">
+                      <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 4L7.295 3.295L4.5 6.085L4.5 0L3.5 0L3.5 6.085L0.71 3.29L0 4L4 8L8 4Z"></path>
+                      </svg>
+                    </span>
+                  </button>
+                </th>
+                <th class="clients-table__header">
+                  <button class="clients-table__header-btn btn-reset sort-th-btn clients-date" data-header="updatedAt">
+                    Последние изменения
+                    <span class="clients-table__header-icon">
+                      <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 4L7.295 3.295L4.5 6.085L4.5 0L3.5 0L3.5 6.085L0.71 3.29L0 4L4 8L8 4Z"></path>
+                      </svg>
+                    </span>
+                  </button>
+                </th>
+                <th class="clients-table__header">
+                  <button class="clients-table__header-btn btn-reset" tabindex="-1">
+                    Контакты
+                  </button>
+                </th>
+                <th class="clients-table__header">
+                  <button class="clients-table__header-btn btn-reset" tabindex="-1">
+                    Действия
+                  </button>
+                </th>
+                <th class="clients-table__header">
+                  <button class="clients-table__header-btn btn-reset" tabindex="-1">
+                    Ссылка
+                  </button>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="clientsBody">
+            </tbody>
+          </table>
+          <div class="clients__preload preload" id="tablePreloader">
+            <div class="preload__icon">
+              <picture>
+                <source media="(max-width: 760px)" srcset="./img/preload-mobile.svg">
+                <img src="./img/preload.svg" alt="Загрузка">
+              </picture>
+            </div>
+          </div>
+        </div>
+
+        <div class="clients__btn-wrapper">
+          <button class="clients__btn add-btn btn btn-reset" id="addClientBtn">
+            <svg class="add-btn__icon" width="23" height="16" viewBox="0 0 23 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.5 8C16.71 8 18.5 6.21 18.5 4C18.5 1.79 16.71 0 14.5 0C12.29 0 10.5 1.79 10.5 4C10.5 6.21 12.29 8 14.5 8ZM5.5 6V3H3.5V6H0.5V8H3.5V11H5.5V8H8.5V6H5.5ZM14.5 10C11.83 10 6.5 11.34 6.5 14V16H22.5V14C22.5 11.34 17.17 10 14.5 10Z">
+              </path>
+            </svg>
+            Добавить клиента
+          </button>
+        </div>
+      </div>
+    </section>
+  </main> -->
+  <div class="modal" id="modalOverlay">
+    <div class="modal__window" id="modalWindow">
+      <button class="modal__close-btn btn-reset">
+        <svg class="modal__close-icon" width="29" height="29" viewBox="0 0 29 29" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M22.2333 7.73333L21.2666 6.76666L14.4999 13.5334L7.73324 6.7667L6.76658 7.73336L13.5332 14.5L6.7666 21.2667L7.73327 22.2333L14.4999 15.4667L21.2666 22.2334L22.2332 21.2667L15.4666 14.5L22.2333 7.73333Z"
+            fill="#B0B0B0"></path>
+        </svg>
+      </button>
+      <div class="modal__title-wrapper">
+        <h2 class="modal__title">Новый клиент</h2>
+        <span class="modal__id"></span>
+      </div>
+      <form class="modal__form client-form" id="modalForm" action="#">
+        <div class="client-form__name-inputs">
+          <div class="client-form__input-wrapper ">
+            <input class="client-form__input" id="surnameInput" type="text">
+            <label class="client-form__label">
+              Фамилия
+              <span class="requared-icon">*</span>
+            </label>
+          </div>
+          <div class="client-form__input-wrapper">
+            <input class="client-form__input" id="nameInput" type="text">
+            <label class="client-form__label">
+              Имя
+              <span class="requared-icon">*</span>
+            </label>
+          </div>
+          <div class="client-form__input-wrapper">
+            <input class="client-form__input" id="lastnameInput" type="text">
+            <label class="client-form__label">
+              Отчество
+            </label>
+          </div>
+        </div>
+        <div class="modal__contacts contacts">
+        </div>
+        <div class="client-form__btn-wrapper form-btn">
+          <div class="form-btn__add-contact-wrapper">
+            <button class="form-btn__add-contact btn-reset" id="addContactBtn" type="button">
+              <span class="form-btn__add-icon-wrapper">
+                <svg class="form-btn__add-icon form-btn__add-icon--active" width="14" height="14" viewBox="0 0 14 14"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.333313 7.00016C0.333313 3.32016 3.31998 0.333496 6.99998 0.333496C10.68 0.333496 13.6666 3.32016 13.6666 7.00016C13.6666 10.6802 10.68 13.6668 6.99998 13.6668C3.31998 13.6668 0.333313 10.6802 0.333313 7.00016ZM6.33329 4.33366C6.33329 3.96699 6.63329 3.66699 6.99996 3.66699C7.36663 3.66699 7.66663 3.96699 7.66663 4.33366V6.33366H9.66663C10.0333 6.33366 10.3333 6.63366 10.3333 7.00033C10.3333 7.36699 10.0333 7.66699 9.66663 7.66699H7.66663V9.66699C7.66663 10.0337 7.36663 10.3337 6.99996 10.3337C6.63329 10.3337 6.33329 10.0337 6.33329 9.66699V7.66699H4.33329C3.96663 7.66699 3.66663 7.36699 3.66663 7.00033C3.66663 6.63366 3.96663 6.33366 4.33329 6.33366H6.33329V4.33366Z">
+                  </path>
+                </svg>
+                <svg class="form-btn__add-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.99998 3.66683C6.63331 3.66683 6.33331 3.96683 6.33331 4.3335V6.3335H4.33331C3.96665 6.3335 3.66665 6.6335 3.66665 7.00016C3.66665 7.36683 3.96665 7.66683 4.33331 7.66683H6.33331V9.66683C6.33331 10.0335 6.63331 10.3335 6.99998 10.3335C7.36665 10.3335 7.66665 10.0335 7.66665 9.66683V7.66683H9.66665C10.0333 7.66683 10.3333 7.36683 10.3333 7.00016C10.3333 6.6335 10.0333 6.3335 9.66665 6.3335H7.66665V4.3335C7.66665 3.96683 7.36665 3.66683 6.99998 3.66683ZM6.99998 0.333496C3.31998 0.333496 0.333313 3.32016 0.333313 7.00016C0.333313 10.6802 3.31998 13.6668 6.99998 13.6668C10.68 13.6668 13.6666 10.6802 13.6666 7.00016C13.6666 3.32016 10.68 0.333496 6.99998 0.333496ZM6.99998 12.3335C4.05998 12.3335 1.66665 9.94016 1.66665 7.00016C1.66665 4.06016 4.05998 1.66683 6.99998 1.66683C9.93998 1.66683 12.3333 4.06016 12.3333 7.00016C12.3333 9.94016 9.93998 12.3335 6.99998 12.3335Z">
+                  </path>
+                </svg>
+              </span>
+
+              Добавить контакт
+            </button>
+          </div>
+          <div class="form-btn__error-field" id="modalError">
+          </div>
+          <button class="form-btn__save-client save-client-btn fill-btn btn btn-reset" id="saveClient" type="submit">
+            <span class="save-client-btn__load-icon">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1.00008 6.04008C1.00008 8.82356 3.2566 11.0801 6.04008 11.0801C8.82356 11.0801 11.0801 8.82356 11.0801 6.04008C11.0801 3.2566 8.82356 1.00008 6.04008 1.00008C5.38922 1.00008 4.7672 1.12342 4.196 1.34812"
+                  stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
+              </svg>
+            </span>
+            Сохранить
+          </button>
+          <button class="form-btn__delete-client additional-btn btn-reset" id="deleteClient" type="button">
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="modal__confirm confirm" id="modalConfirm">
+      <button class="modal__close-btn btn-reset">
+        <svg class="modal__close-icon" width="29" height="29" viewBox="0 0 29 29" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M22.2333 7.73333L21.2666 6.76666L14.4999 13.5334L7.73324 6.7667L6.76658 7.73336L13.5332 14.5L6.7666 21.2667L7.73327 22.2333L14.4999 15.4667L21.2666 22.2334L22.2332 21.2667L15.4666 14.5L22.2333 7.73333Z"
+            fill="#B0B0B0"></path>
+        </svg>
+      </button>
+      <h2 class="confirm__title">Удалить клиента</h2>
+      <p class="confirm__descr">Вы действительно хотите удалить данного клиента?</p>
+      <button class="confirm__btn btn fill-btn btn-reset" id="confirmDelete">
+        Удалить
+      </button>
+      <button class="confirm__cancel-btn additional-btn btn-reset" id="confirmCancel">
+        Отмена
+      </button>
+    </div>
+  </div>
+</body>
+
+</html>

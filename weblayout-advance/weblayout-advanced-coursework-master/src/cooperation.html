@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head_footer.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <div class="breadcrumbs">
+        <div class="container">
+          <a href="index.html" class="breadcrumbs__link">Главная</a>
+          <span class="breadcrumbs__slash">/</span>
+          <a href="catalogue.html" class="breadcrumbs__link breadcrumbs__link--active">Сотрудничество</a>
+        </div>
+      </div>
+
+      @include('partials/cooperation.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

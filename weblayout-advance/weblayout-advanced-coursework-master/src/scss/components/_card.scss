@@ -1,0 +1,124 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 55px 16px 30px;
+  min-height: 420px;
+  background-color: var(--grey-light-color);
+  border-radius: 10px;
+
+  @include desktop {
+    padding: 55px 16px 28px;
+  }
+
+  @include mobile {
+    padding: 37px 2px 15px;
+    min-height: 278px;
+  }
+
+  &__rate {
+    position: absolute;
+    top: 31px;
+    left: 30px;
+    padding-left: 23px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--secondary-color);
+    background-image: url('../img/star.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    @include mobile {
+      top: 17px;
+      left: 17px;
+      padding-left: 18px;
+      font-size: 12px;
+      line-height: 16px;
+      background-size: 34%;
+    }
+  }
+
+  &__picture {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  &__img {
+    margin-bottom: 15px;
+  }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-self: flex-start;
+    padding: 0 11px;
+    height: 182px;
+
+    @include big-desktop {
+      height: 200px;
+    }
+
+    @include desktop {
+      height: 182px;
+    }
+
+    @include mobile {
+      height: 156px;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: auto;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: var(--text-color);
+
+    @include small-tablet {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+
+  &__price {
+    display: block;
+    margin-bottom: 23px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--grey-shade-color);
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    max-width: 128px;
+    max-height: 54px;
+    text-align: center;
+
+    @include desktop {
+      padding: 17px;
+    }
+
+    @include mobile {
+      padding: 10px 23px;
+      max-width: 108px;
+      max-height: 40px;
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.contact {
+  padding-top: 36px;
+  padding-bottom: 70px;
+
+  @include mobile {
+    padding-top: 31px;
+  }
+
+  &__heading {
+    margin-bottom: 10px;
+
+    @include desktop {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__left {
+    width: 49%;
+
+    @include desktop {
+      width: 42.5%;
+    }
+
+    @include tablet {
+      width: 64%;
+    }
+
+    @include small-tablet {
+      width: 100%;
+    }
+  }
+
+  &__paragraph {
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--grey-shade-color);
+  }
+
+  &__right {
+    width: 50%;
+    background-image: url('../img/contacts.png');
+    background-repeat: no-repeat;
+    background-size: 98%;
+    background-position: 14px -18px;
+
+    @include desktop {
+      width: 65.5%;
+      background-position: 9px 35px;
+    }
+
+    @include tablet {
+      width: 36%;
+      background-image: url('../img/contacts_768.png');
+      background-position: 32px -26px;
+      background-size: contain;
+    }
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+}
+
+.checkbox {
+  @include custom-checkbox;
+}

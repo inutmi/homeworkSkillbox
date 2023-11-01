@@ -1,0 +1,43 @@
+@import "mixins";
+
+:root {
+  // base
+  --font-family: "Open Sans", sans-serif;
+  --content-width: 1280px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --white-color: #FFFFFF;
+  --black-color: #000000;
+  --primary-color: #A65CF0;
+  --primary-light-color: #C998FB;
+  --primary-shade-color: #7033AC;
+  --pink-light-color: #F8EFFF;
+  --pink-violet-color: #EBD1FF;
+  --secondary-color: #FF862F;
+  --secondary-light-color: #FFBD59;
+  --secondary-shade-color: #BB370E;
+  --red-input-color: #FF6972;
+  --green-input-color: #B8EC64;
+  --lime-color: #DAFFD1;
+  --gold-color: #D5B986;
+  --bone-color: #FFF5D1;
+  --grey-light-color: #F6F6F6;
+  --md-grey-color: #EAEAEA;
+  --grey-color: #999999;
+  --grey-shade-color: #666666;
+  --text-color: #333333;
+
+  @include big-desktop {
+    --container-offset: 36px;
+  }
+
+  @include tablet {
+    --container-offset: 72px;
+  }
+
+  @include mobile {
+    --container-offset: 12px;
+  }
+}

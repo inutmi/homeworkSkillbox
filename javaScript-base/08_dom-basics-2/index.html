@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- указывается заголовок вкладки -->
+    <title>TODO</title>
+    <!-- здесь указывается кодировка -->
+    <meta charset="UTF-8">
+    <!-- здесь указываются настройки нашего приложения, позволяющего его открыть на любом устройстве, на любом разрешении -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- здесь добавляется ссылка на стили библиотеки bootstrap, которая предоставляет готовые решения  для различных элементов интерфейса (кнопок, списков, заголовков и т.д.)-->
+    <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" 
+    crossorigin="anonymous">
+    <!-- ссылка на файл ява скрипт, обязательно с атрибутом defer -->
+    <script defer src="./todo-app.js"></script>
+    <script>
+        //скрипт запускает обработчик событий 'DOMContentLoaded', необходим чтобы мы имели достум к DOM дереву, загрузившись в html страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            //инициализация приложения. В качестстве аргументов указывается элемент с id todo-app, вторым аргументом передаем заголовок "My tasks"
+            createTodoApp(document.getElementById('todo-app'), 'Мои дела', 'my');
+        });
+    </script>
+
+
+</head>
+<body>
+    <!-- здесь размещается элемент div с классом container и id todo-app, используемый для размещения нашего приложения -->
+    <!-- класс container устанавливается для установки максимальной ширины контента -->
+    <!-- стили для класса представлены библиотекой bootstrap -->
+   <div class="container mb-5">
+        <nav class="nav">
+            <!-- разбивка на отдельные контейнеры для дел наших и дел других с разными id-->
+            <a class="nav-link" href="index.html">Мои дела</a>
+            <a class="nav-link" href="dad.html">Дела папы</a>
+            <a class="nav-link" href="mom.html">Дела мамы</a>
+        </nav>
+   </div>
+   <div id="todo-app" class="container"></div>
+</body>
+</html>

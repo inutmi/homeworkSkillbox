@@ -1,0 +1,119 @@
+.blog {
+  padding-top: 34px;
+  padding-bottom: 35px;
+
+  @include mobile {
+    padding-top: 43px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__heading {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    margin-bottom: 6px;
+
+    @include desktop {
+      left: 36px;
+    }
+
+    @include tablet {
+      left: 72px;
+    }
+
+    @include mobile {
+      left: 12px;
+    }
+  }
+
+  &__swiper {
+    padding-top: 57px;
+
+    @include desktop {
+      padding-top: 59px;
+    }
+
+    @include mobile {
+      padding-top: 50px;
+      padding-bottom: 52px;
+    }
+  }
+
+  &__btns {
+    position: absolute;
+    right: 10px;
+    top: 22px;
+    display: flex;
+    justify-content: space-between;
+    width: 76px;
+
+    @include mobile {
+      right: 40%;
+      top: 0;
+      bottom: -95%;
+    }
+  }
+
+  &__swiper-slide {
+    height: 676px;
+    background: #F7F7F7;
+    border-radius: 10px;
+
+    @include desktop {
+      height: 456px;
+    }
+
+    @include tablet {
+      min-height: 100%;
+    }
+  }
+
+  &__img {
+    height: 63%;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+
+    @include desktop {
+      height: 45%;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    padding: 29px 30px 30px;
+    height: 28%;
+
+    @include desktop {
+      padding: 24px 37px 30px 30px;
+      height: 42.4%;
+    }
+
+    @include tablet {
+      padding: 24px 37px 30px 30px;
+    }
+  }
+
+  &__paragraph {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: var(--text-color);
+
+    @include desktop {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  &__link {
+    display: block;
+    margin-top: auto;
+    width: 59px;
+    height: 15px;
+  }
+
+}

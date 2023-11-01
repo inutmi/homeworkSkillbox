@@ -1,0 +1,74 @@
+.tooltip {
+  &__btn {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url('../img/tooltip.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: background-image .3s ease-in-out;
+
+    &:focus {
+      background-image: url('../img/tooltip-hover.svg');
+    }
+
+    @include for-desktop {
+      &:hover,
+      &:active {
+        background-image: url('../img/tooltip-hover.svg');
+      }
+    }
+  }
+
+  &__txt {
+    display: none;
+    padding: 5px;
+    max-width: 157px;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+    text-align: center;
+    color: var(--white-color);
+    background-color: var(--text-color);
+
+    &[data-show] {
+      display: block;
+    }
+  }
+}
+
+#arrow,
+#arrow::before {
+  position: absolute;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background: inherit;
+}
+
+#arrow {
+  visibility: hidden;
+}
+
+#arrow::before {
+  visibility: visible;
+  content: '';
+  transform: rotate(45deg);
+}
+
+.tooltip__txt[data-popper-placement^='top'] > #arrow {
+  bottom: -6px;
+}
+
+.tooltip__txt[data-popper-placement^='bottom'] > #arrow {
+  top: -6px;
+}
+
+.tooltip__txt[data-popper-placement^='left'] > #arrow {
+  right: -6px;
+}
+
+.tooltip__txt[data-popper-placement^='right'] > #arrow {
+  left: -6px;
+}
+
