@@ -1,0 +1,232 @@
+.header-bottom {
+  height: 60px;
+
+  @include mobile {
+    padding-top: 62px;
+    height: 100%;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px 32px 20px 32px;
+    width: 761px;
+    height: 60px;
+    background-color: var(--grey-light-color);
+    border: 2px solid transparent;
+    border-radius: 10px 0px 0px 10px;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out, border .3s ease-in-out;
+
+    @include desktop {
+      padding: 25px 32px 20px 34px;
+      width: 68.5%;
+    }
+
+    @include tablet {
+      width: 72%;
+    }
+
+    @include small-tablet {
+      padding: 25px 20px 20px 20px;
+      width: 64%;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+      padding: 25px 32px 23px 34px;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    &:active .header-bottom__input {
+      color: var(--black-color);
+    }
+
+    @include for-desktop {
+      &:focus {
+        background-color: var(--pink-light-color);
+        border: 2px solid var(--primary-color);
+        outline: none;
+      }
+
+      &:hover {
+        background-color: var(--md-grey-color);
+      }
+    }
+  }
+
+  &__input {
+    width: 80%;
+    padding-top: 4px;
+    outline: none;
+    cursor: pointer;
+
+    @include mobile {
+      width: 80%;
+    }
+  }
+
+  &__search-svg {
+    margin-right: 7px;
+    width: 17px;
+    height: 17px;
+    fill: var(--grey-color);
+  }
+
+  &__input {
+    background-color: transparent;
+
+    &::placeholder {
+      color: var(--grey-color);
+    }
+  }
+
+  &__btn {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--primary-color);
+    border-radius: 100px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 33%;
+      left: 28%;
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-bottom: 2px solid var(--primary-color);
+      border-right: 2px solid var(--primary-color);
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__choices {
+    margin-right: auto;
+  }
+
+  &__personal {
+    display: flex;
+    align-items: center;
+
+    @include desktop {
+      position: absolute;
+      right: 36px;
+      top: 67px;
+    }
+
+    @include tablet {
+      right: 72px;
+      top: 138px;
+    }
+
+    @include small-tablet {
+      top: 78px;
+    }
+
+    @include mobile {
+      top: 152px;
+      right: 12px;
+    }
+  }
+
+  &__cabinet {
+    margin-right: 32px;
+    transition: background-color .3s ease-in-out;
+
+    &:focus .header-bottom__svg-person {
+      fill: var(--white-color);
+      background-color: var(--primary-light-color);
+    }
+
+    @include for-desktop {
+      &:hover .header-bottom__svg-person {
+        fill: var(--primary-light-color);
+      }
+
+      &:active .header-bottom__svg-person {
+        fill: var(--primary-shade-color);
+      }
+    }
+
+    @include small-tablet {
+      margin-right: 9px;
+    }
+
+    @include mobile {
+      margin-right: 32px;
+    }
+  }
+
+  &__cart {
+    position: relative;
+    transition: background-color .3s ease-in-out;
+
+    &:focus .header-bottom__svg-cart {
+      fill: var(--white-color);
+      background-color: var(--primary-light-color);
+    }
+
+    @include for-desktop {
+      &:hover .header-bottom__svg-cart {
+        fill: var(--primary-light-color);
+      }
+
+      &:active .header-bottom__svg-cart {
+        fill: var(--primary-shade-color);
+      }
+    }
+    @include small-tablet {
+      margin-right: 9px;
+    }
+    @include mobile {
+      margin-right: 32px;
+    }
+
+    &-number {
+      position: absolute;
+      top: calc(100% - 27px);
+      left: -5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 14px;
+      height: 14px;
+      font-size: 11px;
+      color: var(--white-color);
+      text-align: center;
+      background-color: var(--secondary-color);
+      border-radius: 50%;
+    }
+  }
+
+  &__svg-person {
+    width: 26px;
+    height: 28px;
+    fill: var(--primary-color);
+    transition: fill .3s ease-in-out;
+  }
+
+  &__svg-cart {
+    width: 41px;
+    height: 31px;
+    fill: var(--primary-color);
+    transition: fill .3s ease-in-out;
+  }
+}
+
+.cart-svg > ellipse {
+  fill: #FF862F;
+}

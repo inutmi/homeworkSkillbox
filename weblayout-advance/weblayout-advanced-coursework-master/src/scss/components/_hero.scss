@@ -1,0 +1,172 @@
+.hero {
+  height: 400px;
+
+  @include mobile {
+    height: 304px;
+  }
+
+  &__swiper {
+    height: 100%;
+
+    @include mobile {
+      margin-bottom: 33px;
+      height: 210px;
+    }
+  }
+
+  &__swiper-pagination {
+    &>.swiper-pagination-bullet {
+      width: 14px;
+      height: 14px;
+      background-color: var(--black-color);
+
+      @include mobile {
+        width: 6px;
+        height: 6px;
+      }
+    }
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 20px;
+
+    @include mobile {
+      bottom: 5px;
+    }
+  }
+
+  &__slide {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &--1 {
+      background-image: url('../img/hero_1.jpg');
+
+      @include desktop {
+        background-image: url('../img/hero_1_1024.jpg');
+      }
+
+      @include tablet {
+        background-image: url('../img/hero_1_768.jpg');
+      }
+
+      @include mobile {
+        background-image: url('../img/hero_1_320.jpg');
+      }
+    }
+
+    &--2 {
+      background-image: url('../img/hero_2.jpg');
+
+      @include desktop {
+        background-image: url('../img/hero_2_1024.jpg');
+      }
+
+      @include tablet {
+        background-image: url('../img/hero_2_768.jpg');
+      }
+
+      @include mobile {
+        background-image: url('../img/hero_2_320.jpg');
+      }
+    }
+
+    &--3 {
+      background-image: url('../img/hero_3.jpg');
+
+      @include desktop {
+        background-image: url('../img/hero_3_1024.jpg');
+      }
+
+      @include tablet {
+        background-image: url('../img/hero_3_768.jpg');
+      }
+
+      @include mobile {
+        background-image: url('../img/hero_3_320.jpg');
+      }
+
+      & .hero__title {
+        color: var(--white-color);
+        width: 50%;
+
+        @include desktop {
+          width: 75%;
+        }
+
+        @include tablet {
+          width: 100%;
+        }
+      }
+    }
+
+    &--4 {
+      background-image: url('../img/hero_4.jpg');
+
+      @include desktop {
+        background-image: url('../img/hero_4_1024.jpg');
+      }
+
+      @include tablet {
+        background-image: url('../img/hero_4_768.jpg');
+      }
+
+      @include mobile {
+        background-image: url('../img/hero_4_320.jpg');
+      }
+    }
+  }
+
+  &__title {
+    padding: 81px 0 0 15px;
+    margin: 0;
+    margin-bottom: 49px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+    color: var(--grey-color);
+
+    @include desktop {
+      padding: 82px 0 0 0;
+    }
+
+    @include small-tablet {
+      margin-bottom: 40px;
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    @include mobile {
+      padding: 32px 0 0 18px;
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+
+  &__btn {
+    margin-left: 16px;
+    padding: 20px 48px;
+
+    @include desktop {
+      margin-left: 0;
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    &-hidden {
+      display: none;
+
+      @include mobile {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px 25px;
+        max-width: 400px;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="libs/just-validate.min.js"></script>
+	<script src="libs/inputmask.min.js"></script>
+	<script src="js/script.js"></script>
+
+</head>
+<body>
+	<form action="" class="form">
+		<label class="form__label">
+		<input 
+		name="Имя" 
+		type="text" 
+		placeholder="Имя*"
+		data-validate-field="name"
+		class="name" 
+		>
+		</label>
+
+		<label class="form__label">
+		<input 
+		name="tel"
+		type="tel" 
+		placeholder="Телефон*"
+		data-validate-field="phone"
+		class="tel" 
+		>
+		</label>
+
+
+		<label class="form__label">
+		<input 
+		name="email" 
+		type="email" 
+		placeholder="Email*"
+		data-validate-field="mail"
+		class="mail" 
+		>
+		</label>
+
+		<button>Заказать</button>
+	
+	</form>
+</body>
+</html>

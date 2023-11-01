@@ -1,0 +1,36 @@
+const headerTopRegionSelect = document.querySelector('.js-region-select');
+  const headerTopRegion = new Choices (headerTopRegionSelect, {
+    shouldSort: false,
+    searchEnabled: false,
+    itemSelectText: '',
+    position: 'bottom',
+
+    classNames: {
+      containerOuter: 'region-choices header-top__choices',
+      containerInner: 'region-choices__inner',
+      input: 'region-choices__input',
+      inputCloned: 'region-choices__input--cloned',
+      list: 'region-choices__list',
+      listItems: 'region-choices__list--multiple',
+      listSingle: 'region-choices__list--single',
+      listDropdown: 'region-choices__list--dropdown',
+      item: 'region-choices__item',
+      itemSelectable: 'region-choices__item--selectable',
+      itemDisabled: 'region-choices__item--disabled',
+      itemChoice: 'region-choices__item--choice',
+      placeholder: 'region-choices__placeholder',
+      group: 'region-choices__group',
+      groupHeading: 'region-choices__heading',
+      button: 'region-choices__button',
+      activeState: 'is-active',
+      focusState: 'is-focused',
+      openState: 'is-open',
+      disabledState: 'is-disabled',
+      highlightedState: 'is-highlighted',
+      selectedState: 'is-selected',
+      flippedState: 'is-flipped',
+      loadingState: 'is-loading',
+      noResults: 'has-no-results',
+      noChoices: 'has-no-choices'
+    },
+  });

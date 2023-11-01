@@ -1,0 +1,8 @@
+.header {
+  padding-bottom: 32px;
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,211 @@
+<div class="catalogue-couch__left">
+
+  <div class="filter">
+    <h2 class="title filter__heading">Фильтровать по:</h2>
+    <h2 class="title filter__heading filter__heading--desktop">Фильтры:</h2>
+  
+    <ul class="list-reset filter-list">
+      <!-- категория -->
+      <li class="filter-item">
+        <button class="title btn-reset filter-item__title" tabindex="0">Категория</button>
+        <div class="filter-item__list">
+          <div class="filter-item__inner">
+            <div class="custom-checkbox">
+              <input type="checkbox" checked class="custom-checkbox__input" id="couch" tabindex="-1">
+              <label class="custom-checkbox__label" for="couch" tabindex="0">
+                <span class="custom-checkbox__title">Диваны</span>
+              </label>
+            </div>
+            <div class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__input" id="armchair" tabindex="-1">
+              <label class="custom-checkbox__label" for="armchair" tabindex="0">
+                <span class="custom-checkbox__title">Кресла</span>
+              </label>
+            </div>
+            <div class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__input" id="pouf" tabindex="-1">
+              <label class="custom-checkbox__label" for="pouf" tabindex="0">
+                <span class="custom-checkbox__title">Пуфы</span>
+              </label>
+            </div>
+            <div class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__input" id="bed" tabindex="-1">
+              <label class="custom-checkbox__label" for="bed" tabindex="0">
+                <span class="custom-checkbox__title">Кровати</span>
+              </label>
+            </div>
+            <div class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__input" id="bedside-table" tabindex="-1">
+              <label class="custom-checkbox__label" for="bedside-table" tabindex="0">
+                <span class="custom-checkbox__title">Тумбы</span>
+              </label>
+            </div>
+            <div class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__input" id="dresser" tabindex="-1">
+              <label class="custom-checkbox__label" for="dresser" tabindex="0">
+                <span class="custom-checkbox__title">Комоды</span>
+              </label>
+            </div>
+            <div class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__input" id="chair" tabindex="-1">
+              <label class="custom-checkbox__label" for="chair" tabindex="0">
+                <span class="custom-checkbox__title">Стулья</span>
+              </label>
+            </div>
+            <div class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__input" id="table" tabindex="-1">
+              <label class="custom-checkbox__label" for="table" tabindex="0">
+                <span class="custom-checkbox__title">Столы</span>
+              </label>
+            </div>
+            <div class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__input" id="accessories" tabindex="-1">
+              <label class="custom-checkbox__label" for="accessories" tabindex="0">
+                <span class="custom-checkbox__title">Аксессуары</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- цена -->
+      <li class="filter-item filter-price">
+        <button class="title btn-reset filter-item__title filter-price__title">Цена</button>
+        <div class="filter-item__list">
+            <div class="filter-item__inner">
+              <div class="filter-price__inputs">
+                <label class="filter-price__label">
+                  <span class="filter-price__text">от</span>
+                  <input type="number" min="0" max="150000" placeholder="2000" class="filter-price__input" id="priceSliderMin">
+                </label>
+                <label class="filter-price__label">
+                  <span class="filter-price__text">до</span>
+                  <input type="number" min="0" max="300000" placeholder="150 000" class="filter-price__input" id="priceSliderNax">
+                </label>
+              </div>
+              <div class="filter-price__slider" id="priceSlider">
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- скидка -->
+      <li class="filter-item">
+        <button class="title btn-reset filter-item__title">Скидка</button>
+        <div class="filter-item__list">
+          <div class="filter-item__inner">
+            <div class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__input" id="sale_more" tabindex="-1">
+              <label class="custom-checkbox__label" for="sale_more" tabindex="0">
+                <span class="custom-checkbox__title">Более 5 000</span>
+              </label>
+            </div>
+            <div class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__input" id="sale_less" tabindex="-1">
+              <label class="custom-checkbox__label" for="sale_less" tabindex="0">
+                <span class="custom-checkbox__title">Менее 5 000</span>
+              </label>
+            </div>
+            <div class="custom-checkbox">
+              <input type="checkbox" checked class="custom-checkbox__input" id="sale_not-imp" tabindex="-1">
+              <label class="custom-checkbox__label" for="sale_not-imp" tabindex="0">
+                <span class="custom-checkbox__title">Не важно</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- цвет -->
+      <li class="filter-item">
+        <button class="title btn-reset filter-item__title">Цвет</button>
+        <div class="filter-item__list">
+          <div class="filter-item__inner">
+            <div class="custom-checkbox colors">
+              <input type="checkbox" class="custom-checkbox__input" id="brown" tabindex="-1">
+              <label class="custom-checkbox__label" for="brown" tabindex="0">
+                <span class="custom-checkbox__title">Коричневый</span>
+              </label>
+            </div>
+            <div class="custom-checkbox colors">
+              <input type="checkbox" class="custom-checkbox__input" id="black" tabindex="-1">
+              <label class="custom-checkbox__label" for="black" tabindex="0">
+                <span class="custom-checkbox__title">Черный</span>
+              </label>
+            </div>
+            <div class="custom-checkbox colors">
+              <input type="checkbox" class="custom-checkbox__input" id="beige" tabindex="-1">
+              <label class="custom-checkbox__label" for="beige" tabindex="0">
+                <span class="custom-checkbox__title">Бежевый</span>
+              </label>
+            </div>
+            <div class="custom-checkbox colors">
+              <input type="checkbox" class="custom-checkbox__input" id="grey" tabindex="-1">
+              <label class="custom-checkbox__label" for="grey" tabindex="0">
+                <span class="custom-checkbox__title">Серый</span>
+              </label>
+            </div>
+            <div class="custom-checkbox colors">
+              <input type="checkbox" class="custom-checkbox__input" id="white" tabindex="-1">
+              <label class="custom-checkbox__label" for="white" tabindex="0">
+                <span class="custom-checkbox__title">Белый</span>
+              </label>
+            </div>
+            <div class="custom-checkbox colors">
+              <input type="checkbox" class="custom-checkbox__input" id="blue" tabindex="-1">
+              <label class="custom-checkbox__label" for="blue" tabindex="0">
+                <span class="custom-checkbox__title">Синий</span>
+              </label>
+            </div>
+            <div class="custom-checkbox colors">
+              <input type="checkbox" class="custom-checkbox__input" id="orange" tabindex="-1">
+              <label class="custom-checkbox__label" for="orange" tabindex="0">
+                <span class="custom-checkbox__title">Оранжевый</span>
+              </label>
+            </div>
+            <div class="custom-checkbox colors">
+              <input type="checkbox" class="custom-checkbox__input" id="yellow" tabindex="-1">
+              <label class="custom-checkbox__label" for="yellow" tabindex="0">
+                <span class="custom-checkbox__title">Желтый</span>
+              </label>
+            </div>
+            <div class="custom-checkbox colors">
+              <input type="checkbox" class="custom-checkbox__input" id="green" tabindex="-1">
+              <label class="custom-checkbox__label" for="green" tabindex="0">
+                <span class="custom-checkbox__title">Зеленый</span>
+              </label>
+            </div>
+            <div class="custom-checkbox colors">
+              <input type="checkbox" class="custom-checkbox__input" id="light-blue" tabindex="-1">
+              <label class="custom-checkbox__label" for="light-blue" tabindex="0">
+                <span class="custom-checkbox__title">Голубой</span>
+              </label>
+            </div>
+            <div class="custom-checkbox colors">
+              <input type="checkbox" class="custom-checkbox__input" id="purple" tabindex="-1">
+              <label class="custom-checkbox__label" for="purple" tabindex="0">
+                <span class="custom-checkbox__title">Фиолетовый</span>
+              </label>
+            </div>
+
+            <button class="btn-reset load-more" id="colors-more">
+              + еще 
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  
+  </div>
+
+  <div class="catalogue__add add">
+    <div class="add__top">
+    </div>
+    <div class="add__bottom">
+      <h2 class="title banner__title add__title">Оксфорд 1950</h2>
+      <p class="paragraph banner__paragraph add__paragraph">Новая коллекция изысканных кресел</p>
+      <a class="cathegories__catalogue add__btn" href="#">
+        В каталог
+        <span class="btn-arrow btn-arrow-next cathegories__btn"></span>
+      </a>
+    </div>
+  </div>
+
+</div>

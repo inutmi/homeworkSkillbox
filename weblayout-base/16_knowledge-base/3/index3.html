@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+[class*="ground-pane"] {
+    filter: grayscale(1)
+}
+[class*="copyrights-pane"] {
+  display: none !important;
+}
+</style>
+</head>
+<body>
+    <div id="myMap1" style="width: 460px; height: 460px"></div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        // Функция ymaps.ready() будет вызвана, когда
+        // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+        ymaps.ready(init);
+        function init() {
+            // Создание карты.
+            var myMap = new ymaps.Map("myMap1", {
+                // Координаты центра карты.
+                // Порядок по умолчанию: «широта, долгота».
+                // Чтобы не определять координаты центра карты вручную,
+                // воспользуйтесь инструментом Определение координат.
+                center: [48.872185, 2.3542],
+                // Уровень масштабирования. Допустимые значения:
+                // от 0 (весь мир) до 19.
+                zoom: 15
+            });
+
+           
+
+            // Создание геообъекта с типом точка (метка).
+        var myGeoObject = new ymaps.GeoObject({
+        geometry: {
+        type: "Point", // тип геометрии - точка
+        coordinates: [48.872185, 2.3542] // координаты точки
+        
+        
+    
+    }
+        });
+
+        var myPlacemark = new ymaps.Placemark([48.872185, 2.354224], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: 'location.svg',
+    iconImageSize: [28, 40],
+    iconImageOffset: [-3, -42]
+});
+
+
+
+        // Размещение геообъекта на карте.
+        // myMap.geoObjects.add(myGeoObject);  
+        myMap.geoObjects.add(myPlacemark);
+        
+         myMap.controls.remove('geolocationControl'); // удаляем геолокацию
+         myMap.controls.remove('searchControl'); // удаляем поиск
+         myMap.controls.remove('trafficControl'); // удаляем контроль трафика
+         myMap.controls.remove('typeSelector'); // удаляем тип
+         myMap.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+         myMap.controls.remove('zoomControl'); // удаляем контрол зуммирования
+         myMap.controls.remove('rulerControl'); // удаляем контрол правил
+         myMap.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+        }
+    </script>
+
+    
+</body>
+</html>

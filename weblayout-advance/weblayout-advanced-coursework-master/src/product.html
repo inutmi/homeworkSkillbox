@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head_product.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <main class="main">
+      <div class="breadcrumbs">
+        <div class="container">
+          <a href="index.html" class="breadcrumbs__link">Главная</a>
+          <span class="breadcrumbs__slash">/</span>
+          <a href="catalogue.html" class="breadcrumbs__link">Каталог</a>
+          <span class="breadcrumbs__slash">/</span>
+          <a href="#" class="breadcrumbs__link">Диваны</a>
+          <span class="breadcrumbs__slash">/</span>
+          <a href="#" class="breadcrumbs__link">Прямые диваны</a>
+          <span class="breadcrumbs__slash">/</span>
+          <a href="#" class="breadcrumbs__link breadcrumbs__link--active">D-31</a>
+        </div>
+      </div>
+
+      @include('partials/product-card.html')
+      @include('partials/similar-products.html')
+    </main>
+
+    @include('partials/footer.html')
+    @include('partials/modal_buy_one_click.html')
+  </div>
+  <div class="overlay" data-menu-overlay></div>
+</body>
+
+</html>

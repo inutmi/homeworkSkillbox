@@ -1,0 +1,213 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+@import "./components/region-choices";
+@import "./components/cathegory-choices";
+@import "./components/burger";
+@import "./components/btns";
+@import "./components/card";
+@import "./components/breadcrumbs";
+@import "./components/header";
+@import "./components/header-top";
+@import "./components/header-main";
+@import "./components/header-bottom";
+@import "./components/cathegories";
+@import "./components/banner";
+
+@import "./components/filter";
+@import "./components/add";
+@import "./components/catalogue";
+
+@import "./components/footer";
+
+.catalogue__couch {
+  padding-bottom: 70px;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+
+    @include desktop {
+      position: relative;
+      flex-direction: column;
+    }
+  }
+}
+
+.catalogue-couch {
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 74.4%;
+
+  @include desktop {
+    width: 100%;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 3.3%;
+    width: 296px;
+
+    @include big-desktop {
+      margin-bottom: 5%;
+    }
+
+    @include desktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__block {
+    padding-bottom: 60px;
+    width: 100%;
+  }
+
+  &__wrapper {
+    padding-bottom: 11px;
+  }
+
+  &__heading {
+    margin-bottom: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: var(--black-color);
+
+    @include desktop {
+      padding-bottom: 70px;
+    }
+
+    @include tablet {
+      padding-bottom: 140px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    min-height: 336px;
+
+    @include mobile {
+      min-height: 226px;
+    }
+
+    & .card__picture {
+      margin-bottom: unset;
+    }
+
+    & .card__img {
+      @include desktop {
+        max-height: 125px;
+      }
+    }
+
+    & .card__descr {
+      height: unset;
+    }
+
+    & .product-link {
+      margin-bottom: 22px;
+      @include tablet {
+        margin-bottom: auto;
+      }
+      & .card__title {
+        height: 62px;
+        -webkit-line-clamp: 2; 
+        display: -webkit-box; 
+        -webkit-box-orient: vertical; 
+        overflow: hidden;
+
+        @include desktop {
+          height: unset;
+          max-height: 93px;
+          -webkit-line-clamp: 3; 
+        }
+        @include tablet {
+          height: 93px;
+        }
+        @include small-tablet {
+          height: 80px;
+        }
+        @include mobile {
+          height: 77px;
+        }
+      }
+    }
+
+    & .card__btn {
+      max-width: 61px;
+
+      @include desktop {
+        max-width: 95px;
+      }
+      @include mobile {
+        padding: 10px 0;
+        max-width: unset;
+        width: 111px;
+      }
+    }
+  }
+
+  // btns
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.catalogue-couch__block > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 10px;
+}
+
+.catalogue-couch__btns > .swiper-pagination-bullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: var(--primary-color);
+  background-color: transparent;
+  opacity: 100%;
+  border: 2px solid #A65CF0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+
+    // &:focus {
+    //   background-color: var(--primary-light-color);
+    //   border-color: var(--primary-color);
+    // }
+
+    // @include for-desktop {
+    //   &:hover {
+    //     color: var(--white-color);
+    //     background-color: var(--primary-color);
+    //   }
+
+    //   &:active {
+    //     background: var(--primary-shade-color);
+    //     border-color: transparent;
+    //   }
+    // }
+}
+
+.catalogue-couch__btns > .swiper-pagination-bullet-active {
+  color: var(--white-color);
+  background: var(--primary-shade-color);
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+
+

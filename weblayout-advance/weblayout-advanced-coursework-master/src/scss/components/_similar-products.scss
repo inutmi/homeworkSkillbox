@@ -1,0 +1,161 @@
+.similar {
+  padding-bottom: 76px;
+
+  @include desktop {
+    padding-bottom: 69px;
+  }
+  @include mobile {
+    padding-top: 14px;
+  }
+
+  & .container {
+    position: relative;
+  }
+
+  &__heading {
+    position: absolute;
+    top: 14px;
+    left: 0;
+    display: inline-block;
+    padding-left: 15px;
+    font-weight: 600;
+    font-size: 24px;
+
+    @include big-desktop {
+      padding-left: 35px;
+    }
+    @include tablet {
+      padding-left: 72px;
+    }
+    @include mobile {
+      position: unset;
+      padding-left: 0;
+    }
+  }
+
+  &__swiper {
+    padding-top: 65px;
+
+    @include mobile {
+      padding-top: 25px;
+      padding-bottom: 55px;
+    }
+
+    &-btns {
+      position: absolute;
+      top: 14px;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100px;
+      height: 32px;
+
+      @include mobile {
+        top: unset;
+        right: calc((100% - 100px) / 2);
+        bottom: -4px;
+      }
+    }
+
+    &-btn {
+      &-prev {
+        left: 21px;
+        @include mobile {
+          left: 12px;
+        }
+      }
+      &-next {
+        right: 0;
+        @include mobile {
+          right: 11px;
+        }
+      }
+    }
+  }
+
+  &-card {
+    padding: 78px 16px 19px;
+    min-height: 335px;
+
+    @include desktop {
+      padding: 44px 16px 19px;
+      min-height: 357px;
+    }
+    @include small-tablet {
+      min-height: 310px;
+    }
+    @include mobile {
+      padding: 34px 9px 10px;
+      min-height: 230px;
+    }
+
+    &__picture {
+      margin-bottom: 0;
+    }
+
+    &__img {
+      height: 133px;
+      object-fit: contain;
+
+      @include mobile {
+        height: 62px;
+      }
+    }
+
+    &__descr {
+      height: 220px;
+      @include desktop {
+        height: 210px;
+      }
+      @include small-tablet {
+        margin-top: auto;
+        height: 160px;
+      }
+      @include mobile {
+        margin-top: 5px;
+        padding: 0 6px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 25px;
+
+      @include big-desktop {
+        height: 93px;
+      }
+      @include desktop {
+        height: 59px;
+      }
+      @include tablet {
+        height: 93px;
+      }
+      @include small-tablet {
+        margin-bottom: 10px;
+        height: 50px;
+      }
+      @include mobile {
+        margin-bottom: 16px;
+        height: 63px;
+        word-wrap: break-word;
+      }
+    }
+
+    &__price {
+      @include mobile {
+        margin-bottom: 16px;
+        font-size: 16px;
+      }
+    }
+
+    &__btn {
+      max-width: 61px;
+      @include desktop {
+        min-width: 90px;
+      }
+      @include mobile {
+        min-width: unset;
+        max-width: unset;
+      }
+    }
+  }
+}

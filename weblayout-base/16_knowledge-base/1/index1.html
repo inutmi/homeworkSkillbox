@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        font-family: 'Open Sans', 'Roboto';
+    }
+    
+    label {
+        position: relative;
+        padding-left: 29px;
+        cursor: pointer;
+    }
+
+    #din, #bears, #roes, #foxes, #wulfes, #deers {
+        display: none;
+    }
+    
+    #din + span, #bears + span, #roes + span, #foxes + span, #wulfes + span, #deers + span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        text-align: center;
+        stroke: #999999;
+    }
+    #din + span:before,  #bears + span:before, #roes + span:before, #foxes + span:before, #wulfes + span:before, #deers + span:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        background-image: url("data:image/svg+xml,%3Csvg width='8' height='7' viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.47742L3.10291 5.58033L7.58033 1.10291' stroke='%23CCB26E'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border: 1px solid #CCB26E;
+        border-radius: 3px;
+       
+    }
+
+
+    #din:checked + span:before, #bears:checked + span:before, #roes:checked + span:before, #foxes:checked + span:before, #wulfes:checked + span:before, #deers:checked + span:before {
+        opacity: 1;
+    }
+
+    .animals-title {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        margin-top: 21px;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        color: #333333;
+    }
+
+
+    .item_animals {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+
+    }
+
+    .animals-descr {
+        width: 176px;
+        height: 309px;
+        top: 70px;
+        left: 92px;
+        radius: 10px;
+        background: #FFFFFF;
+        border-radius: 10px;
+    }
+
+    .animals {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+</style>
+</head>
+<body>
+    <div class="animals-descr">
+    <h1 class="animals-title">
+        Категории:
+    </h1>
+    <ul class="animals">
+
+    <li class="item_animals">
+    <label for="din">
+        <input type="checkbox" name="din" id="din">
+        Динозавры
+        <span><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="14" height="14" rx="2.5"/>
+            </svg></span>
+    </label>
+    </li>
+    <li class="item_animals">
+    <label for="bears">
+        <input type="checkbox" name="bears" id="bears">
+        Медведи
+        <span><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="14" height="14" rx="2.5"/>
+            </svg></span>
+    </label>
+    </li>
+    <li class="item_animals">
+    <label for="roes">
+        <input type="checkbox" name="roes" id="roes">
+        Косули
+        <span><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="14" height="14" rx="2.5"/>
+            </svg></span>
+    </label>
+    </li>
+    <li class="item_animals">
+    <label for="foxes">
+        <input type="checkbox" name="foxes" id="foxes">
+        Лисы
+        <span><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="14" height="14" rx="2.5"/>
+            </svg></span>
+    </label>
+    </li>
+    <li class="item_animals">
+    <label for="wulfes">
+        <input type="checkbox" name="wulfes" id="wulfes">
+        Волки
+        <span><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="14" height="14" rx="2.5"/>
+            </svg></span>
+    </label>
+    </li>
+    <li class="item_animals">
+    <label for="deers">
+        <input type="checkbox" name="deers" id="deers">
+        Олени и лоси
+        <span><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="14" height="14" rx="2.5"/>
+            </svg></span>
+    </label>
+    </li>
+</ul>
+</div>
+</body>
+</html>

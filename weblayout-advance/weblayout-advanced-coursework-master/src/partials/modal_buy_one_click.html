@@ -1,0 +1,39 @@
+<div class="modal oneclick-buy">
+  <button class="close-btn oneclick-buy__close">
+    <svg class="oneclick-buy__close-svg">
+      <use xlink:href="img/sprite.svg#exit"></use>
+    </svg>
+  </button>
+  <h2 class="heading oneclick-buy__heading">Купить в один клик</h2>
+  <p class="paragraph oneclick-buy__text">Чтобы оформить заказ — заполните формы ниже и наш менеджер свяжется с вами в течении часа.</p>
+  <form class="oneclick-buy__form">
+    <input type="text" name="buy" value="Хочу купить диван D31" style="display: none;">
+    <label class="oneclick-buy__label">
+      <input type="text" name="name" class="oneclick-buy__input" placeholder="Как вас зовут?" id="form-name" required>
+    </label>
+    <label class="oneclick-buy__label">
+      <input type="tel" name="telephone" class="oneclick-buy__input" placeholder="Ваш телефон" id="form-tel" required>
+    </label>
+    <input type="submit" value="Отправить" class="purple-btn oneclick-buy__submit">
+    <div class="custom-checkbox">
+      <input type="checkbox" checked class="custom-checkbox__input" id="form-checkbox" tabindex="-1" required>
+      <label class="custom-checkbox__label" for="form-checkbox" tabindex="0">
+        <span class="custom-checkbox__title">
+          Принимаю <a href="#">пользовательское соглашение</a>
+        </span>
+      </label>
+    </div>
+  </form>
+</div>
+
+<div class="modal feedback-modal">
+  <button class="close-btn feedback-modal__close">
+    <svg class="feedback-modal__close-svg">
+      <use xlink:href="img/sprite.svg#exit"></use>
+    </svg>
+  </button>
+  <svg class="feedback-modal__elephant-svg">
+    <use xlink:href="img/sprite.svg#elephant"></use>
+  </svg>
+  <h2 class="heading">Спасибо, мы вам перезвоним!</h2>
+</div>

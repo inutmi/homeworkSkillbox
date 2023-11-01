@@ -1,0 +1,91 @@
+.banner {
+  position: relative;
+  height: 600px;
+
+  @include mobile {
+    height: 339px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+
+    @include mobile {
+      height: 62%;
+    }
+  }
+
+  &__block {
+    position: absolute;
+    top: 25.5%;
+    left: 16.7%;
+    width: 94%;
+
+    @include big-desktop {
+      left: 6.7%;
+    }
+
+    @include desktop {
+      top: 25.5%;
+      left: 36px;
+    }
+
+    @include tablet {
+      top: 25.5%;
+    }
+
+    @include mobile {
+      left: 12px;
+      top: 31px;
+    }
+  }
+
+  &__title {
+    font-family: "Playfair";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 72px;
+    color: var(--gold-color);
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__paragraph {
+    margin-bottom: 49px;
+    width: 38%;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    color: var(--white-color);
+
+    @include big-desktop {
+      width: 48%;
+    }
+
+    @include tablet {
+      width: 70%;
+    }
+
+    @include mobile {
+      width: 73%;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 20px 30px;
+
+    @include mobile {
+      position: absolute;
+      bottom: -155px;
+      left: 0;
+      width: 100%;
+    }
+  }
+}

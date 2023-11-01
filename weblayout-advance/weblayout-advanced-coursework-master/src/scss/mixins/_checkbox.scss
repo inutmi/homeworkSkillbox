@@ -1,0 +1,83 @@
+/* stylelint-disable */
+
+@mixin custom-checkbox {
+  position: relative;
+
+  &__field {
+    appearance: none;
+    position: absolute;
+  }
+
+  &__text {
+    padding-left: 22px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--text-color);
+    cursor: pointer;
+
+    @include mobile {
+      padding-left: 20px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 24%;
+      border: 1px solid var(--grey-color);
+      border-radius: 2px;
+      background-color: var(--white-color);
+      width: 14px;
+      height: 14px;
+      box-sizing: border-box;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 24%;
+      width: 15px;
+      height: 15px;
+      box-sizing: border-box;
+      background-image: url("../img/checkbox.svg");
+      background-position: center;
+      background-size: 10px 10px;
+      background-repeat: no-repeat;
+      background-color: var(--primary-color);
+      border-radius: 2px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration-line: underline;
+    color: var(--primary-color);
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}
+
+.checkbox__field:checked + .checkbox__text::after {
+  opacity: 1;
+}
+
+// .checkbox__field:focus + .checkbox__text::before {
+//   outline: 1px solid var(--primary-color);
+//   outline-offset: 2px;
+// }
+
+.checkbox__field:disabled + .checkbox__text {
+  opacity: 0.4;
+  pointer-events: none;
+}

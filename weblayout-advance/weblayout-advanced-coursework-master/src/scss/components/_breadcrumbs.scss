@@ -1,0 +1,37 @@
+.breadcrumbs {
+  padding-bottom: 32px;
+  &__link {
+    display: inline-block;
+    margin-right: 3px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--grey-color);
+    transition: all .3s ease-in-out;
+
+    &--active {
+      color: var(--primary-shade-color);
+    }
+
+    &:focus {
+      color: var(--primary-color);
+    }
+
+    @include for-desktop {
+      &:hover {
+        color: var(--primary-light-color);
+      }
+
+      &:active {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  &__slash {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--grey-color);
+  }
+}

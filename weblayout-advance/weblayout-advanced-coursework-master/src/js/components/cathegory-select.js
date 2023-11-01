@@ -1,0 +1,36 @@
+const headerBottomSelect = document.querySelector('.js-bottom-select');
+  const headerBottom = new Choices (headerBottomSelect, {
+    shouldSort: false,
+    searchEnabled: false,
+    itemSelectText: '',
+    position: 'bottom',
+
+    classNames: {
+      containerOuter: 'cathegory-choices header-bottom__choices',
+      containerInner: 'cathegory-choices__inner',
+      input: 'cathegory-choices__input',
+      inputCloned: 'cathegory-choices__input--cloned',
+      list: 'cathegory-choices__list',
+      listItems: 'cathegory-choices__list--multiple',
+      listSingle: 'cathegory-choices__list--single',
+      listDropdown: 'cathegory-choices__list--dropdown',
+      item: 'cathegory-choices__item',
+      itemSelectable: 'cathegory-choices__item--selectable',
+      itemDisabled: 'cathegory-choices__item--disabled',
+      itemChoice: 'cathegory-choices__item--choice',
+      placeholder: 'cathegory-choices__placeholder',
+      group: 'cathegory-choices__group',
+      groupHeading: 'cathegory-choices__heading',
+      button: 'cathegory-choices__button',
+      activeState: 'is-active',
+      focusState: 'is-focused',
+      openState: 'is-open',
+      disabledState: 'is-disabled',
+      highlightedState: 'is-highlighted',
+      selectedState: 'is-selected',
+      flippedState: 'is-flipped',
+      loadingState: 'is-loading',
+      noResults: 'has-no-results',
+      noChoices: 'has-no-choices'
+    },
+  });
