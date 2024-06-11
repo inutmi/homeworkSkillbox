@@ -1,0 +1,14 @@
+.prototype-chain {
+	word-break: break-word;
+}
+
+@media (max-width: 415px)
+{
+	h1 {
+		font-size: 25px;
+	}
+	
+	p, li {
+		font-size: 15px;
+	}
+}

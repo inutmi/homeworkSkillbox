@@ -1,0 +1,16 @@
+{
+  "name": "practice",
+  "description": "Online payment form",
+  "private": true,
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+
+  },
+  "author": "AP",
+  "dependencies": {
+    "inputmask": "^5.0.8",
+    "just-validate": "^4.3.0",
+    "parcel": "^2.10.3"
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online payment form</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="./src/index.js"></script>
+</head>
+<body>
+    <div class="container">
+    <form class="form" action="#" id="before-submit_form" autocomplete="off" novalidate="novalidate" name="form">
+        <div class="form__input-box control-wrapper">
+              <input
+                class="form__input form-control"
+                name="cardnumber"
+                autocomplete="cc-number"
+                pattern="[0-9]*"
+                type="text"
+                placeholder="0000 0000 0000 0000"
+                autocomplete="off"
+                id="cardnumber"
+                data-reg=""
+              />
+              <label for="cardnumber">Enter the card number</label>
+        </div>
+        <div class="form__input-box control-wrapper">
+              <input
+                name="date"
+                inputmode="numeric"
+                pattern="m/y"
+                type="text"
+                placeholder="MM/YY"
+                class="form__input form-control"
+                autocomplete="off"
+                id="date"
+                data-reg=""
+              />
+              <label for="date">Enter the expiry date of the card</label>
+        </div>
+        <div class="form__input-box control-wrapper">
+              <input
+                name="cvc"
+                autocomplete="cc-csc"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                type="password"
+                class="form__input form-control"
+                placeholder="CVC"
+                autocomplete="off"
+                name="cvc"
+                id="cvc"
+                data-reg="^[a-zA-Z0-9]+$"
+              />
+              <label for="cvc">Enter the cvc code of the card</label>
+        </div>
+        <div class="form__input-box control-wrapper">
+              <input
+                type="email"
+                class="form__input form-control"
+                placeholder="Enter your email"
+                autocomplete="off"
+                name="email"
+                id="email"
+                data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
+              />
+              <label for="email">Enter your email</label>
+        </div>
+        <!-- <button class="form__btn" type="submit" id="submit-btn" name="button">Оплатить</button>            id="submit-btn"-->
+        <div class="button">
+          <input
+          type="submit"
+          value="Оплатить"
+  
+          id="button"
+          name="button"
+          />
+        </div>
+      </form>
+      </div>
+    
+</body>
+</html>
